@@ -1,0 +1,5 @@
+SELECT C.Country, COUNT(*) AS N
+FROM STREAM S RIGHT OUTER JOIN CUSTOMER C
+ON (S.CustomerId=C.CustomerId)
+WHERE S.StreamId IS NULl
+GROUP BY C.Country
